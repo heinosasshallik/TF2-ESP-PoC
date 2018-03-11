@@ -3,12 +3,10 @@
 #include <Windows.h>
 #include <TlHelp32.h>
 
-//THIS FILE SIMPLY DOES MOST OF THE BACKEND WORK FOR US, 
-//FROM FINDING THE PROCESS TO SETTING UP CORRECT ACCESS FOR US 
-//TO EDIT MEMORY 
-//IN MOST GAMES, A SIMPLER VERSION OF THIS CAN BE USED, or if you're injecting then its often not necessary
-//This file has been online for quite a while so credits should be shared but im using this from NubTIK
-//So Credits to him and thanks
+/*
+This code borrowed from NubTik.
+It handles memory reading and writing to and from the game.
+*/
 
 class CHackProcess
 {
