@@ -10,8 +10,8 @@ Offsets::Offsets()
 
 	numberOfPlayersPointer = 0x8E9718; //SERVER.DLL. find out how many players in-game.
 
-												   //is multi-level pointer: the real pointer is at *( *(client.dll+[0]) + [1]) + [2]
-												   //if these change, then there are other options you can try as well in the guide.
+	//is multi-level pointer: the real pointer is at *( *(client.dll+[0]) + [1]) + [2]
+	//if these change, then there are other options you can try as well in the guide.
 	//crosshairIDPointerOffsets[3] = { 0x00C8CCC4,0x50,0x1CC };
 
 
