@@ -6,5 +6,5 @@ https://www.youtube.com/watch?v=shpsa_FqLvA
   
 As a proof of concept it works, but it has some flaws:  
 	The flickering is because frame buffering has not been implemented.  
-	Vertical height not always displayed correctly.
-	If you clone it, then the offsets are probably outdated by now.
+	Vertical height not always displayed correctly.  
+	If you want to use it, then you will have to update the offsets, they are outdated by now.
