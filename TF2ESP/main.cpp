@@ -1,23 +1,4 @@
-/*
 
-PROBLEMS:
-1) for some reason the esp always spawns to the right of the medic, even though the aimangle and screen position calculations are correct.
-It also goes out of frame before the medic if you rotate the screen so that the medic moves to the left.
-I checked with a pen and paper - the medic really is at the very centre of the screen. So what is going wrong?
-
-
-TO DO:
-*) fix calculation bugs
-*) test memory leaks
-
-PROBLEMS:
-
-SOLVED PROBLEMS:
-1) shared_ptr deletes the pointer if the code goes out of scope. Switch to a normal pointer and manage the memory yourself.
-2) cant convert from shared_ptr<player> to shared_ptr<ourplayer>. This is fixed by implementing all the functions and variables that are needed in Player and overloading them in subclasses.
-3) fix memory leak. -- fixed by deallocating and deleting the vector's elements on each new pass of the loop.
-4) Successfully implement a vector of polymorphic objects -- make a  vector of pointers to the base class and put the subclass into that vector as a pointer to base class. Make sure to define all the variables and functions the subclass needs in baseclass. Make sure to make the functions virtual, so they can be overwritten, and make sure to provide an implementation of all the virtual functions in the base class as well (including the destructor)
-*/
 
 #include <iostream>
 #include <vector>
