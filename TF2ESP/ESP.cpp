@@ -22,8 +22,7 @@ float ESP::calculate3dDistance(float* src, float* dst) {
 }
 
 //Calculate what our angleRotations should be to aim at the enemy.
-//world to screen function. If you search for it on Googl (or under other resources), you'll see the logic.
-//joonis ka sellest calcAngle.bmp CSSAimbot kaustas
+//world to screen function.
 //Returns vertical and horizontal angles
 std::vector<float> ESP::calcAngle(float* src, float* dst)
 {
@@ -33,13 +32,13 @@ std::vector<float> ESP::calcAngle(float* src, float* dst)
 	//double delta[3] = { (src[0] - dst[0]), (src[1] - dst[1]), (src[2] - dst[2]) };
 	double delta[3] = { (dst[0] - src[0]), (dst[1] - src[1]), (dst[2] - src[2]) };
 
-	//2)ruutjuur(v1_ruut + v2_ruut). Annab kauguse 2D xy tasandil sinust vastaseni. 
+	//2)sqrt(v1^2 + v2^2). Distance from you to the enemy on 2D horizontal plane.
 	double hypothenuse = sqrt(delta[0] * delta[0] + delta[1] * delta[1]); 
 																		  
 	angles.push_back((float)(atanf(delta[2] / hypothenuse) * 57.295779513082f)); //that constant changes radians to degrees. It's 180/pi.
 																		   
 	angles.push_back((float)(atanf(delta[1] / delta[0]) * 57.295779513082f));
-	//random?
+	
 	angles.push_back(0.0f);
 	//this is here because arc functions don't give answers in the [0,360) range.
 	if (delta[0] <= 0.0)
@@ -52,9 +51,6 @@ std::vector<float> ESP::calcAngle(float* src, float* dst)
 		}
 		
 	}
-	//if (angles[1] >= 180.0) {
-	//	angles[1] = 
-	//}
 
 	return angles;
 }
