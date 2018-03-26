@@ -108,7 +108,7 @@ Returns a float. Visible objects are between [-1,1]
 */
 std::vector<float> ESP::calculateScreenPositions(Player* enemy, Player* ourPlayer) {
 	std::vector<float> screenPositions;
-	//Reinitializing because it gets fucked up somewhere and I cant find it by searching, i'm sorry,
+	//Reinitializing
 	ourPlayer->fieldOfVision[0] = 33.3;
 	ourPlayer->fieldOfVision[1] = 54.0;
 
